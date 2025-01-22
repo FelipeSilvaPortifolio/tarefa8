@@ -20,5 +20,5 @@ Quando eu selecionar uma quantidade maior que 10 produtos
 Então devo receber uma mensagem informando o limite máximo de quantidade
 
 Cenario: Limpar seleção
-Quando eu clicar no botão de limpar seleção
+Quando eu clicar no botão de Limpar
 Então as opções de configuração devem retornar ao estado inicial
