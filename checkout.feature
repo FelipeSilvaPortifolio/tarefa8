@@ -12,12 +12,7 @@
             Dado que estou na tela de cadastro
 
             Esquema do Cenário: Cadastro com diferentes dados
-            Quando eu preencher o campo "Nome" com "<nome>"
-            E eu preencher o campo "Sobrenome" com "<sobrenome>"
-            E eu preencher o campo "E-mail" com "<email>"
-            E eu preencher o campo "senha" com "<senha>"
-            E eu preencher o campo "Confirmação de senha" com "<confirmação>"
-            E eu clicar no botão "Cadastrar"
+            Quando preencho os campos <nome>, <sobrenome>, <email>, <senha> e <confirmação> com dados válidos
             Então devo ver a mensagem de sucesso "Cadastro realizado com sucesso"
 
             Exemplos:
@@ -29,19 +24,9 @@
             | Pedro | Pereira   | pedropereira@email.com | 123456 | 123456      |
 
             Cenario: Cadastro com e-mail inválido
-            Quando eu preencher o campo "Nome" com "João"
-            E eu preencher o campo "Sobrenome" com "Silva"
-            E eu preencher o campo "E-mail" com "joaosilvaemail.com"
-            E eu preencher o campo "senha" com "123456"
-            E eu preencher o campo "Confirmação de senha" com "123456"
-            E eu clicar no botão "Cadastrar"
-            Então devo ver a mensagem de erro "Formato de E-mail inválido"
+            Quando eu preencher o com e-mail com um formato inválido
+            Então devo ver uma mensagem de erro "E-mail inválido"
 
             Cenario: Cadastro com campos vazios
-            Quando eu preencher o campo "Nome" com ""
-            E eu preencher o campo "Sobrenome" com ""
-            E eu preencher o campo "E-mail" com ""
-            E eu preencher o campo "senha" com ""
-            E eu preencher o campo "Confirmação de senha" com ""
-            E eu clicar no botão "Cadastrar"
-            Então devo ver a mensagem de erro "Todos os campos são obrigatórios"	
+            Quando eu tento enviar o formulário com campos obrigatórios em branco
+            Então devo receber mensagens de alerta indicando os campos que devem ser preenchidos	
